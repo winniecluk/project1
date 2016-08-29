@@ -1,0 +1,47 @@
+// screen 1 will be an intro screen.
+// elements: button, image
+// functionality: you will have to click the button to move onto the next screen.
+
+// screen 2 will be a story screen.
+// elements: images, text
+// functionality: you will have to click the arrow to continue to the next screen.
+
+// screen 3 will be an instructions screen.
+// elements: images, text
+// functionality: you will have to click the button to start the game.
+//  TIMER STARTS WHEN YOU CLICK START
+
+// screen 4 will be the main game screen.
+// elements: 6 divs, spider images, timer, score counter
+// you will have 1 minute to hit 8 spiders correctly to move onto the win screen.
+// hitting 8 spiders sets off a window alert and then moves you onto the win screen once you click OK.
+// hitting a correct spider gives you one point, hitting an incorrect spider takes away one point.
+// if 1 minute has passed and you have not hit 8 correct spiders, it sets off
+// a window alert that time is up, and you move onto the lose screen.
+
+// screen 5 is the win screen.
+// elements: button
+// functionality: you can hit the button to replay. TIMER WILL START AGAIN
+
+// screen 6 is the lose screen.
+// elements: button
+// functionality: you can hit the button to replay. TIMER WILL START AGAIN
+
+// variables I'll need
+// score counter
+// win = true or false
+
+// functions I'll need
+// initialize the game
+// to move from screen to screen
+  // to hide a screen
+  // to show a screen
+// to start the timer
+// to stop the game once 1 minute is up and the person hasn't hit enough spiders
+  // to trigger a window alert and then move onto the lose screen
+// to stop the game if a person wins
+  // to trigger a window alert and then move onto the win screen
+// to up the score every time a correct spider is hit
+  // to down the score every time an incorrect spider is hit
+  // to replace the old spider batch with the new spider batch
+// to test win condition

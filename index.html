@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Project 1: Spider Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Didact+Gothic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="splash">
+  <!-- splash screen !-->
+    <div class="inside">
+        <h2>What is this? Splash screen</h2>
+        <button id="splash-button">Start</button>
+    </div>
+  </div>
+
+  <div id="story">
+    <!-- info screen !-->
+    <div class="inside">
+      <h2>What is this? Story screen</h2>
+      <button id="story-button">Continue</button>
+    </div>
+  </div>
+
+  <div id="instructions">
+    <!-- 2nd info screen !-->
+    <div class="inside">
+      <h2>What is this? Instructions screen</h2>
+      <button id="instructions-button">Ready to Play?</button>
+    </div>
+  </div>
+
+  <div id="game">
+  <!-- game screen !-->
+    <div class="inside">
+      <table id="gameboard">
+        <tr>
+          <td class="spider-column">
+            <img class="true" src="images/tinydomestichouse.png">
+          </td>
+          <td class="spider-column">
+            <img class="false" src="images/tinyhobo.png">
+          </td>
+          <td class="spider-column">
+            <img class="true" src="images/tinydomestichouse.png">
+          </td>
+          <td class="spider-column">
+            <img class="true" src="images/tinydomestichouse.png">
+          </td>
+          <td class="spider-column">
+            <img class="false" src="images/tinyhobo.png">
+          </td>
+          <td class="spider-column">
+              <img class="true" src="images/tinydomestichouse.png">
+          </td>
+        </tr>
+      </table>
+          <!--
+          canvas
+          <td width="580" height="474">
+          <canvas class="canvas-class" width="580" height="474"></canvas>
+          </td>
+        </tr>
+        <tr>
+          <td width="594" height="100">
+          </td>
+        </tr>
+      </table>
+
+          <td class="spider-row"><img class="true" src="#" height="50" width="50">
+          </td>
+          <td class="spider-row"><img class="false" src="#" height="50" width="50">
+          </td>
+          <td class="spider-row">
+          </td>
+        </tr>
+        <tr class="spider-row">
+          <td class="spider-row">
+          </td>
+          <td class="spider-row">
+          </td>
+          <td class="spider-row">
+          </td>
+        </tr>
+        <tr class="spider-row">
+          <td class="spider-row">
+          </td>
+          <td class="spider-row">
+          </td>
+          <td class="spider-row">
+          </td>
+        </tr>
+        !-->
+      <table>
+        <tr id="console">
+          <td class="console">
+            Level:
+          </td>
+          <td class="console" id="timer">
+            Timer:
+          </td>
+          <td class="console" id="score">
+            Score:
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div id="win">
+  <!-- win screen !-->
+    <div class="inside">
+      <h2>What is this? Win screen</h2>
+      <button class='replay'>Play Again?</button>
+    </div>
+  </div>
+
+  <div id="lose">
+   <!-- lose screen !-->
+    <div class="inside">
+      <h2>What is this? Lose screen</h2>
+      <button class='replay'>Play Again?</button>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    init();
+  </script>
+</body>
+</html>
