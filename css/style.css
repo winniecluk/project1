@@ -12,6 +12,7 @@ h1 {
   font-family: 'Cabin Sketch', cursive;
 }
 
+
 /*DIV SETUP*/
 
 div {
@@ -27,6 +28,24 @@ div {
   display: inline-block;
   padding: 0;
   margin: 0;
+}
+
+/*BUTTON DECORATION*/
+
+button {
+  display: flex;
+
+}
+
+#splash-button {
+  font-size: 60px;
+  font-weight: bold;
+  color: orange;
+  padding: 20px 20px;
+  margin: 20px auto;
+  background-color: green;
+  background: -webkit-linear-gradient;
+  text-transform: uppercase;
 }
 
 /*CANVAS*/
@@ -93,39 +112,47 @@ img {
   10% {
     transform: translate3d(0px, -120px, 0px);
     background-color: orange;
-    animation
+    animation-timing-function: ease-out;
   }
 
   20% {
     transform: translate3d(0px, -80px, 0px);
+    animation-timing-function: ease-in;
   }
 
   30% {
     transform: translate3d(0px, -40px, 0px);
+    animation-timing-function: ease-out;
   }
 
   40% {
     transform: translate3d(0px, 0px, 0px);
+    animation-timing-function: ease-in;
   }
 
   50% {
     transform: translate3d(0px, 40px, 0px);
+    animation-timing-function: ease-out;
   }
 
   60% {
     transform: translate3d(0px, 80px, 0px);
+    animation-timing-function: ease-in;
   }
 
   70% {
     transform: translate3d(0px, 120px 0px);
+    animation-timing-function: ease-out;
   }
 
   80% {
     transform: translate3d(0px, 160px, 0px);
+    animation-timing-function: ease-in;
   }
 
   90% {
     transform: translate3d(0px, 200px, 0px);
+    animation-timing-function: ease-out;
   }
 
   100% {

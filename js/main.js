@@ -6,14 +6,25 @@ var timer = 60;
 
 // TIMER FUNCTION
 function startTimer(){
+  $('#timer').html('Timer: ' + timer);
   setTimeout(function(){
-    stop();
-  }, 61000);
-  // }, 5000);
-  setInterval(function(){
-    $('#timer').html('Timer: ' + timer--);
+    timer--;
+    if (timer==0){
+      return stop();
+    } else {
+      return startTimer();
+    }
   }, 1000);
 }
+
+
+//     stop();
+//   }, 61000);
+//   // }, 5000);
+//   setInterval(function(){
+//     $('#timer').html('Timer: ' + timer--);
+//   }, 1000);
+// }
 
 // VIEW
 
@@ -68,8 +79,9 @@ function init() {
     hideScreen('#win');
     hideScreen('#lose');
     showScreen('#game');
-    // startTimer();
+    startTimer();
     score = 0;
+    changeScoreDisplay();
     // won = false;
     timer = 61;
   });
