@@ -8,20 +8,11 @@ var timer = 60;
 function startTimer(){
   $('#timer').html('Timer: ' + timer);
   setTimeout(function(){
-<<<<<<< HEAD
-    timer--;
-    if (timer==0){
-      return stop();
-    } else {
-      return startTimer();
-    }
-=======
     stop();
-  // }, 61000);
-  }, 5000);
+  }, 61000);
+  // }, 5000);
   setInterval(function(){
     $('#timer').html('Timer: ' + timer--);
->>>>>>> master
   }, 1000);
 }
 
@@ -67,19 +58,19 @@ function stop(){
 
 function init() {
   $('#splash').show();
-  $('#splash-button').on('click', function(evt){
+  $('#start').on('click', function(evt){
     hideScreen('#splash');
     showScreen('#story');
   });
-  $('#story-button').on('click', function(evt){
+  $('#arrow-1').on('click', function(evt){
     hideScreen('#story');
     showScreen('#story-2');
   });
-  $('#story-button-2').on('click', function(evt){
+  $('#arrow-2').on('click', function(evt){
     hideScreen('#story-2');
     showScreen('#instructions');
   });
-  $('#instructions-button').on('click', function(evt){
+  $('#ready-to-play').on('click', function(evt){
     hideScreen('#instructions');
     showScreen('#game');
     startTimer();
@@ -88,16 +79,13 @@ function init() {
     replaceSpiders();
     // addClass();
   });
-  $('.replay').on('click', function(evt){
+  $('.replay-yes').on('click', function(evt){
     hideScreen('#win');
     hideScreen('#lose');
     showScreen('#game');
     startTimer();
-<<<<<<< HEAD
-=======
-    clearInterval(replaceSpiders);
-    replaceSpiders();
->>>>>>> master
+    // clearInterval(replaceSpiders);
+    // replaceSpiders();
     score = 0;
     changeScoreDisplay();
     // won = false;
@@ -189,7 +177,7 @@ function getRandom3(){
 //         }
 //         // $(this).html('<img class="true" src="images/tinydomestichouse.png">');
 //       }
-//     });
+//     });f
 //   }, 5000);
 // }
 
