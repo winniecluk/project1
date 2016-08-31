@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   box-sizing: border-box;
 }
 
@@ -90,7 +90,7 @@ div {
   font-family: 'Cabin Sketch', cursive;
   font-size: 40px;
   font-weight: bold;
-  col/*or: rgb(255, 255, 255);*/
+  color: black;
   /*background-color: rgb(139, 147, 223);*/
   /*background-image: linear-gradient(to top right, #606ACB, white);*/
   border: 2px solid black;
@@ -98,6 +98,8 @@ div {
 }
 
 #console {
+  background-image: url('../images/woodtexture.jpg');
+  background-size: cover;
   /*background-color: #606ACB;*/
 }
 
@@ -128,7 +130,7 @@ hr {
   margin: 0;
   position: relative;
   left: 370px;
-  bottom: 20px;
+  bottom: 0px;
 }
 
 #arrow-2 {
@@ -149,6 +151,21 @@ hr {
   position: relative;
   top: 30px;
   left: 60px;
+  animation-name: bobble;
+}
+
+@keyframes bobble {
+  0% {
+      transform: translate3d(0px, 20px, 0px);
+      animation-timing-function: ease-in;
+  }
+  50% {
+      transform: translate3d(0px, 50px, 0px);
+      animation-timing-function: ease-out;
+  }
+  100% {
+      transform: translate3d(0px, 20px, 0px);
+  }
 }
 
 #start {
@@ -179,7 +196,7 @@ hr {
 /* SPIDER ANIMATION drop 0 */
 
 td {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
   padding: 0;
   margin: 0;
 }
