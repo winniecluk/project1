@@ -43,7 +43,7 @@ function changeScoreDisplay(){
 
 // STOP GAME
 function stop(){
-  if (score < 8) {
+  if (score < 26) {
     window.alert('you lost!');
     $('#game').hide();
     $('#lose').show();
