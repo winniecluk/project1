@@ -10,25 +10,98 @@
 <body>
   <div id="splash">
   <!-- splash screen !-->
-    <div class="inside">
-        <h2>What is this? Splash screen</h2>
+    <div class="inside" id="splash-screen">
+        <img id='title' src='images/title.gif'>
+        <img id='start' src='images/start-button.gif'>
         <button id="splash-button">Start</button>
     </div>
   </div>
 
   <div id="story">
     <!-- info screen !-->
-    <div class="inside">
-      <h2>What is this? Story screen</h2>
-      <button id="story-button">Continue</button>
+    <div class="inside story-screen">
+      <img src='images/title-story-screen.gif'>
+      <table class="story-table" width="600">
+        <tr>
+          <td width="160">
+          </td>
+          <td>
+            <div>
+              <p>"(your name). (Your name), help me!"</p>
+
+              <p>You tear your eyes away from the television long enough to see a furry, four-inch spider descending from the ceiling.</p>
+
+              <p>"(your name), your mom is after us again! Help us!"</p>
+
+              <p>You decide to ignore the impossibility of an arthropod with a cerebrum the size of a () somehow possessing the higher brain function to learn a human language, and then somehow developing the necessary body parts to make sounds that would be recognizable to other human beings.
+              "Why should I help you? You're just another pest."</p>
+
+              <p>"You can't judge our entire species by a few poisonous apples!" the spider protests. "That's positively species-ist of you!"</p>
+
+              <p>You pause to consider. "You know what? You're right. I've been grossly intolerant of other species without making any attempt to understand them. Instead
+              of trying to learn more about the reasons for and intricacies of their existence, I merely label their presence as an inconvenience to my own and exterminate them for the sake of expediency."</p>
+
+              <p>The spider nods "That's right. A lot of us are totally harmless to you, you know! In fact, we eat other insects in your house that do spread disease, like mosquitoes, fleas, flies, cockroaches... we eat practically everything else you guys kill. Sometimes we even eat other spiders. You should be thanking us!"</p>
+
+              <button id="story-button">Continue</button>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 
+  <div id="story-2">
+    <!-- 2nd info screen !-->
+    <div class="inside story-screen">
+      <img src='images/title-story-screen.gif'>
+      <table class="story-table" width="600">
+        <tr>
+          <td width="160">
+          </td>
+          <td>
+            <div>
+              <p>"Alright then. Thanks a lot."</p>
+
+              <p>"I don't need your meaningless thanks; I need your help!" the spider snaps. "Your mom just found a lot of us dwelling near her window, and one of our scouts just spotted her rolling up some newspaper! You know how nearsighted she is... she can't tell the difference between those of us who are poisonous and those of us who aren't hurting anybody and just want to be left alone.
+              She's going to kill us all! And right after I just finished making my last mortgage payment!"</p>
+
+              <p>You decide to ignore the poorly-written joke and simply volunteer your help so that you can commence playing this game. "Alright. I'll help. What do you want me to do?"</p>
+
+              <p>"Just tell her you'll take care of the spider situation. I have no problem sacrificing all my poisonous relatives just to save my kind," the spider replies.
+              "We'll teach you how to recognize the difference between the poisonous ones and the harmless ones so that you can selectively exterminate."</p>
+
+              <p>"So... you want me to save your species by killing off part of your species."</p>
+
+              <p>"It's called a paradox. Didn't you ever take Intro to Philosophy?" The spider sighs. "Whatever. The point is, you're our only hope. Only you can <span>save our spiders!</span></p>
+
+              <button id="story-button-2">Continue</button>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+
   <div id="instructions">
     <!-- 2nd info screen !-->
-    <div class="inside">
-      <h2>What is this? Instructions screen</h2>
-      <button id="instructions-button">Ready to Play?</button>
+    <div class="inside story-screen">
+      <img src='images/title-story-screen.gif'>
+      <table class="story-table" width="600">
+        <tr>
+          <td width="160">
+          </td>
+          <td>
+            <div>
+              <h1>Objective</h1>
+              <img src='#'>
+              <img src='#'>
+              <button id="instructions-button">Ready to Play?</button>
+            </div>
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 
@@ -38,22 +111,22 @@
       <table id="gameboard">
         <tr>
           <td class="spider-column">
-            <img class="true" src="images/tinydomestichouse.png">
+            <img class="true spider p0" src="images/black-widow-100.png">
           </td>
           <td class="spider-column">
-            <img class="false" src="images/tinyhobo.png">
+            <img class="false spider p1" src="images/jumping-spider.png">
           </td>
           <td class="spider-column">
-            <img class="true" src="images/tinydomestichouse.png">
+            <img class="true spider p2" src="images/black-widow-100.png">
           </td>
           <td class="spider-column">
-            <img class="true" src="images/tinydomestichouse.png">
+            <img class="true spider p1" src="images/black-widow-100.png">
           </td>
           <td class="spider-column">
-            <img class="false" src="images/tinyhobo.png">
+            <img class="false spider p2" src="images/jumping-spider.png">
           </td>
           <td class="spider-column">
-              <img class="true" src="images/tinydomestichouse.png">
+              <img class="true spider p0" src="images/black-widow-100.png">
           </td>
         </tr>
       </table>
@@ -102,7 +175,7 @@
             Timer:
           </td>
           <td class="console" id="score">
-            Score:
+            Score: 0
           </td>
         </tr>
       </table>
@@ -111,16 +184,20 @@
 
   <div id="win">
   <!-- win screen !-->
-    <div class="inside">
-      <h2>What is this? Win screen</h2>
+    <div class="inside replay-screen">
+      <img src="images/win-message.gif" class="replay-message">
+      <img src="images/happy-spider.jpg" class="replay-spider">
+      <img src="images/replay.gif" class="replay-yes">
       <button class='replay'>Play Again?</button>
     </div>
   </div>
 
   <div id="lose">
    <!-- lose screen !-->
-    <div class="inside">
-      <h2>What is this? Lose screen</h2>
+    <div class="inside replay-screen">
+      <img src="images/lose-message.gif" class="replay-message">
+      <img src="images/sad-spider.jpg" class="replay-spider">
+      <img src="images/replay.gif" class="replay-yes">
       <button class='replay'>Play Again?</button>
     </div>
   </div>

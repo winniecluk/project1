@@ -8,8 +8,8 @@ var timer = 60;
 function startTimer(){
   setTimeout(function(){
     stop();
-  }, 61000);
-  // }, 5000);
+  // }, 61000);
+  }, 5000);
   setInterval(function(){
     $('#timer').html('Timer: ' + timer--);
   }, 1000);
@@ -54,6 +54,10 @@ function init() {
   });
   $('#story-button').on('click', function(evt){
     hideScreen('#story');
+    showScreen('#story-2');
+  });
+  $('#story-button-2').on('click', function(evt){
+    hideScreen('#story-2');
     showScreen('#instructions');
   });
   $('#instructions-button').on('click', function(evt){
@@ -61,14 +65,17 @@ function init() {
     showScreen('#game');
     startTimer();
     // makeNewSpiders();
-    deploySpiders();
+    // deploySpiders();
+    replaceSpiders();
     // addClass();
   });
   $('.replay').on('click', function(evt){
     hideScreen('#win');
     hideScreen('#lose');
     showScreen('#game');
-    // startTimer();
+    startTimer();
+    clearInterval(replaceSpiders);
+    replaceSpiders();
     score = 0;
     // won = false;
     timer = 61;
@@ -111,6 +118,10 @@ function getRandom(){
   return Math.round(Math.random());
 }
 
+function getRandom3(){
+  return Math.floor(Math.random() * 3);
+}
+
 // deploy randomspiders
 // $('.spider-column').each(function(ind, column){
 //   if ($(column).html().trim() == ""){
@@ -140,23 +151,38 @@ function getRandom(){
 // append good or bad spider at random
 // unless good spiders < 3
 
-function deploySpiders(){
-  setInterval (function() {
-    console.log('deploySpiders works');
+// function deploySpiders(){
+//   setInterval (function() {
+//     console.log('deploySpiders works');
+//     $('.spider-column').each(function(ind, column){
+//       if ($(column).html().trim() == ""){
+//         var result = getRandom();
+//         if($('.true').length < 2){
+//           $(this).append('<img class="true spider" src="images/tinydomestichouse.png">');
+//         } else if (result == 1){
+//           $(this).append('<img class="true spider" src="images/tinydomestichouse.png">');
+//         } else {
+//           $(this).append('<img class="false spider" src="images/tinyhobo.png">');
+//         }
+//         // $(this).html('<img class="true" src="images/tinydomestichouse.png">');
+//       }
+//     });
+//   }, 5000);
+// }
+
+function replaceSpiders(){
+  setInterval(function(){
     $('.spider-column').each(function(ind, column){
-      if ($(column).html().trim() == ""){
-        var result = getRandom();
-        if($('.true').length < 2){
-          $(this).append('<img class="true" src="images/tinydomestichouse.png">');
-        } else if (result == 1){
-          $(this).append('<img class="true" src="images/tinydomestichouse.png">');
-        } else {
-          $(this).append('<img class="false" src="images/tinyhobo.png">');
-        }
-        // $(this).html('<img class="true" src="images/tinydomestichouse.png">');
+      $(this).html('');
+      var result = getRandom();
+      var resultID = getRandom3();
+      if (result == 1){
+        $(this).append('<img class="true spider p' + resultID + '" src="images/black-widow-100.png">');
+      } else {
+        $(this).append('<img class="false spider p' + resultID + '" src="images/jumping-spider.png">');
       }
     });
-  }, 5000);
+  }, 6000);
 }
 
 //

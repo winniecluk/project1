@@ -4,12 +4,16 @@
 }
 
 /*TEXT*/
+
 body {
   font-family: 'Didact Gothic', sans-serif;
+  font-size: 13px;
 }
 
-h1 {
+span {
   font-family: 'Cabin Sketch', cursive;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 /*DIV SETUP*/
@@ -29,14 +33,33 @@ div {
   margin: 0;
 }
 
-/*CANVAS*/
+#splash-screen {
+  background: url('../images/background-idea.jpg');
+}
 
+.story-screen {
+  background: url('../images/story-background.jpg');
+}
 
+.story-table div {
+  border: 2px solid black;
+  border-radius: 25px;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: inline-block;
+  width: 440px;
+  height: 500px;
+}
+
+.replay-screen {
+  background: black;
+}
 
 /*GAMEBOARD*/
 
 #gameboard {
-  background: url('../images/resize-window.jpg');
+  background: url('../images/window-idea.jpg');
   background-size: contain;
 }
 
@@ -50,23 +73,39 @@ div {
   height: 484px;
 }
 
-.empty {
-  width: 97px;
-  height: 484px;
+/*IMAGE POSITIONING*/
+
+#title {
+  position: relative;
+  top: 30px;
+  left: 60px;
 }
 
-/*IMAGE*/
-
-
-
-/*.opened {
-  border: 2px solid black;
-  background: green;
+#start {
+  position: relative;
+  top: 180px;
+  left: 180px;
 }
 
-.closed {
-  display: none;
-}*/
+.replay-spider {
+  height: 260px;
+  display: block;
+  margin: 0 auto;
+}
+
+.replay-message {
+  height: 280px;
+  position: relative;
+  left: 120px;
+  height: 150px;
+}
+
+.replay-yes {
+  position: relative;
+  left: 160px;
+}
+
+/* SPIDER ANIMATION drop 0 */
 
 td {
   border: 1px solid red;
@@ -74,58 +113,64 @@ td {
   margin: 0;
 }
 
-img {
-  animation-name: truespiders;
-  animation-duration: 4s;
+.p0 {
+  animation-name: spiders0;
+  animation-duration: 3s;
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transform: translate3d(0px, -240px, 0px);
 }
 
-@keyframes truespiders {
+@keyframes spiders0 {
   0% {
     transform: translate3d(0px, -160px, 0px);
-    background-color: red;
     animation-timing-function: ease-in;
   }
 
   10% {
     transform: translate3d(0px, -120px, 0px);
-    background-color: orange;
-    animation
+    animation-timing-function: ease-out;
   }
 
   20% {
     transform: translate3d(0px, -80px, 0px);
+    animation-timing-function: ease-in;
   }
 
   30% {
     transform: translate3d(0px, -40px, 0px);
+    animation-timing-function: ease-out;
   }
 
   40% {
     transform: translate3d(0px, 0px, 0px);
+    animation-timing-function: ease-in;
   }
 
   50% {
     transform: translate3d(0px, 40px, 0px);
+    animation-timing-function: ease-out;
   }
 
   60% {
     transform: translate3d(0px, 80px, 0px);
+    animation-timing-function: ease-in;
   }
 
   70% {
     transform: translate3d(0px, 120px 0px);
+    animation-timing-function: ease-out;
   }
 
   80% {
     transform: translate3d(0px, 160px, 0px);
+    animation-timing-function: ease-in;
   }
 
   90% {
     transform: translate3d(0px, 200px, 0px);
+    animation-timing-function: ease-out;
   }
 
   100% {
@@ -133,14 +178,71 @@ img {
   }
 }
 
-/*  -webkit-transform: translate(3em,0);
-  -moz-transform: translate(3em,0);
-  -o-transform: translate(3em,0);
-  -ms-transform: translate(3em,0);
-  transform: translate(3em,0);
-  0%   {background-color: red; left:0px; top:0px;}
-  25%  {background-color: yellow; left:0px; top:20px;}
-  50%  {background-color: blue; left:0px; top:40px;}
-  75%  {background-color: green; left:0px; top:60px;}
-  100% {background-color: red; left:0px; top:8px;}
-*/}
+/*ANIMATION DROP 1*/
+
+.p1 {
+  animation-name: spiders1;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform: translate3d(0px, -240px, 0px);
+}
+
+@keyframes spiders1 {
+  0% {
+    transform: translate3d(0px, -160px, 0px);
+    animation-timing-function: ease-in;
+  }
+
+  25% {
+    transform: translate3d(0px, -100px, 0px);
+    animation-timing-function: ease-in;
+  }
+
+  50% {
+    transform: translate3d(0px, -40px, 0px);
+    animation-timing-function: ease-out;
+  }
+
+  75% {
+    transform: translate3d(0px, 20px 0px);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translate3d(0px, 60px, 0px);
+  }
+}
+
+/*ANIMATION DROP 2 */
+
+.p2 {
+  animation-name: spiders2;
+  animation-duration: 3s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform: translate3d(0px, -240px, 0px);
+}
+
+@keyframes spiders2 {
+  0% {
+    transform: translate3d(0px, -140px, 0px);
+    animation-timing-function: ease-in;
+  }
+
+  33% {
+    transform: translate3d(0px, -40px, 0px);
+    animation-timing-function: ease-in;
+  }
+
+  66% {
+    transform: translate3d(0px, 60px 0px);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: translate3d(0px, 160px, 0px);
+  }
+}
