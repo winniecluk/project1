@@ -1,4 +1,5 @@
 * {
+  /* just for placing */
   /*border: 1px solid red;*/
   box-sizing: border-box;
 }
@@ -34,24 +35,8 @@ div {
   margin: 0;
 }
 
-/*BUTTON DECORATION*/
 
-/*button {
-  display: flex;
-}*/
-
-/*#splash-button {
-  font-size: 60px;
-  font-weight: bold;
-  color: orange;
-  padding: 20px 20px;
-  margin: 20px auto;
-  background-color: green;
-  background: -webkit-linear-gradient;
-  text-transform: uppercase;
-}*/
-
-/*CANVAS*/
+/*SCREEN DISPLAY */
 
 #splash-screen {
   background: url('../images/background-idea.jpg');
@@ -91,8 +76,6 @@ div {
   font-size: 40px;
   font-weight: bold;
   color: black;
-  /*background-color: rgb(139, 147, 223);*/
-  /*background-image: linear-gradient(to top right, #606ACB, white);*/
   border: 2px solid black;
   border-radius: 24px;
 }
@@ -100,7 +83,6 @@ div {
 #console {
   background-image: url('../images/woodtexture.jpg');
   background-size: cover;
-  /*background-color: #606ACB;*/
 }
 
 .spider-column {
@@ -193,10 +175,9 @@ hr {
   left: 160px;
 }
 
-/* SPIDER ANIMATION drop 0 */
+/* SPIDER ANIMATION CLASS 0 */
 
 td {
-  /*border: 1px solid red;*/
   padding: 0;
   margin: 0;
 }
@@ -266,7 +247,7 @@ td {
   }
 }
 
-/*ANIMATION DROP 1*/
+/*SPIDER ANIMATION CLASS 1*/
 
 .p1 {
   animation-name: spiders1;
