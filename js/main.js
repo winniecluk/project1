@@ -13,8 +13,6 @@ function startTimer(){
   stopGame = setTimeout(function(){
     stop();
   }, 31000);
-  // 5 seconds just for testing
-  // }, 5000);
   timerCountdown = setInterval(function(){
     $('#timer').html('Timer: ' + timer--);
   }, 1000);
@@ -41,7 +39,7 @@ function stop(){
   clearTimeout(stopGame);
   clearInterval(timerCountdown);
   clearInterval(regenerateID);
-  if (score < 26) {
+  if (score < 13) {
     window.alert('Time is up!');
     $('#game').hide();
     $('#lose').show();
@@ -121,9 +119,9 @@ function replaceSpiders(){
       var result = getRandom();
       var resultID = getRandom3();
       if (result == 1){
-        $(this).append('<img class="true spider p' + resultID + '" src="images/black-widow-100.png">');
+        $(this).append('<img class="true spider p' + resultID + '" src="images/animated-widow.gif">');
       } else {
-        $(this).append('<img class="false spider p' + resultID + '" src="images/jumping-spider.png">');
+        $(this).append('<img class="false spider p' + resultID + '" src="images/animated-jumping.gif">');
       }
     });
   }, 4000);

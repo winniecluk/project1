@@ -1,6 +1,4 @@
 * {
-  /* just for placing */
-  /*border: 1px solid red;*/
   box-sizing: border-box;
 }
 
@@ -17,6 +15,9 @@ span {
   font-weight: bold;
 }
 
+h1 {
+  font-size: 20px;
+}
 
 /*DIV SETUP*/
 
@@ -92,6 +93,28 @@ div {
 
 /*IMAGE POSITIONING*/
 
+#furry-yellow {
+  transform: translate3d(0px, -240px, 0px);
+  animation-name: descend;
+  animation-duration: 45s;
+  animation-delay: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes descend {
+  0% {
+      transform: translate3d(0px, -240px, 0px);
+      animation-timing-function: ease-in;
+  }
+  50% {
+      transform: translate3d(0px, 0px, 0px);
+      animation-timing-function: ease-out;
+  }
+  100% {
+      transform: translate3d(0px, 200px, 0px);
+  }
+}
+
 #intro-jumping {
   float: left;
   height: 100px;
@@ -123,10 +146,9 @@ hr {
 }
 
 #ready-to-play {
-  display: block;
+  display: flex;
   position: relative;
-  top: 60px;
-  left: -30px;
+  margin: 0 auto;
 }
 
 #title {
@@ -134,19 +156,23 @@ hr {
   top: 30px;
   left: 60px;
   animation-name: bobble;
+  animation-duration: 1s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 @keyframes bobble {
   0% {
-      transform: translate3d(0px, 20px, 0px);
+      transform: translate3d(0px, 0px, 0px);
       animation-timing-function: ease-in;
   }
   50% {
-      transform: translate3d(0px, 50px, 0px);
+      transform: translate3d(0px, 5px, 0px);
       animation-timing-function: ease-out;
   }
   100% {
-      transform: translate3d(0px, 20px, 0px);
+      transform: translate3d(0px, 0px, 0px);
   }
 }
 
@@ -184,7 +210,7 @@ td {
 
 .p0 {
   animation-name: spiders0;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -251,7 +277,7 @@ td {
 
 .p1 {
   animation-name: spiders1;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -288,7 +314,7 @@ td {
 
 .p2 {
   animation-name: spiders2;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-direction: alternate;
