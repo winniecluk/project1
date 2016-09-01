@@ -1,21 +1,24 @@
 // GLOBAL VARIABLES
 var counter = 0;
 var score = 0;
-var timer = 60;
+var timer = 30;
 // var won = false;
 
 // TIMER FUNCTION
+
+var stopGame;
+var timerCountdown;
+
 function startTimer(){
   $('#timer').html('Timer: ' + timer);
-  setTimeout(function(){
+  stopGame = setTimeout(function(){
     stop();
-  }, 61000);
+  }, 31000);
   // }, 5000);
-  setInterval(function(){
+  timerCountdown = setInterval(function(){
     $('#timer').html('Timer: ' + timer--);
   }, 1000);
 }
-
 
 //     stop();
 //   }, 61000);
@@ -43,6 +46,12 @@ function changeScoreDisplay(){
 
 // STOP GAME
 function stop(){
+  console.log(stopGame);
+  clearTimeout(stopGame);
+  console.log(timerCountdown);
+  clearInterval(timerCountdown);
+  console.log(regenerateID);
+  clearInterval(regenerateID);
   if (score < 26) {
     window.alert('you lost!');
     $('#game').hide();
@@ -88,8 +97,9 @@ function init() {
     // replaceSpiders();
     score = 0;
     changeScoreDisplay();
+    replaceSpiders();
     // won = false;
-    timer = 61;
+    timer = 30;
   });
 }
 
@@ -181,8 +191,10 @@ function getRandom3(){
 //   }, 5000);
 // }
 
+var regenerateID;
+
 function replaceSpiders(){
-  setInterval(function(){
+  regenerateID = setInterval(function(){
     $('.spider-column').each(function(ind, column){
       $(this).html('');
       var result = getRandom();
