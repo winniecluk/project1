@@ -27,7 +27,7 @@
 The object of this game is to correctly identify 13 black widows and kill them in under 30 seconds. Amongst the black widows are also harmless jumping spiders, which the player will have to avoid killing. Killing the correct spider garners a one-point increase while killing the incorrect spider will return a one-point decrease. Players will see an informational screen before the game starts to help them identify each type of spider.
 
 ##<a name="user">User Instructions</a>
-The user shall click the Start button and then read through the three instructional screens. Every 4 seconds, spiders will descend from the ceiling and ascend back. The user will click on the black widows and will leave the jumping spiders alone. Getting 13 black widows in under one minute will 
+The user shall click the Start button and then read through the three instructional screens. Every 4 seconds, spiders will descend from the ceiling and ascend back. The user will click on the black widows and will leave the jumping spiders alone. Getting 13 black widows in under one minute will lead to a win outcome; anything less than 13 will lead to a lose outcome.
 
 
 ## <a name="started">How It Started:</a>
