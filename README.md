@@ -1,4 +1,4 @@
-#SAVE OUR SPIDERS!
+# SAVE OUR SPIDERS!
 
 <img src="images/title-screen.png" height="240">
 <img src="images/game-screen.png" height="240">
@@ -16,13 +16,13 @@
 |[6. Later Features](#features)|
 |[7. Resources](#resources)|
 
-##<a name="links">Links</a>
+## <a name="links">Links</a>
 
 [Deployed App](https://winniecluk.github.io/project1/)  
 [Github repo](https://github.com/winniecluk/project1)  
 [Trello Board](https://trello.com/b/Ic0Emz8c/save-our-spiders)
 
-##<a name="objective">Objective</a>
+## <a name="objective">Objective</a>
 
 The object of this game is to correctly identify 13 black widows and kill them in under 30 seconds. Amongst the black widows are also harmless jumping spiders, which the player will have to avoid killing. Killing the correct spider garners a one-point increase while killing the incorrect spider will return a one-point decrease. Players will see an informational screen before the game starts to help them identify each type of spider.
 
@@ -42,7 +42,7 @@ Therefore, I aim to correct the grave injustice and unfair villainization that h
 |Javascript||All Instructors|
 |||Testers|
 
-##<a name="features">Features to be added later</a>
+## <a name="features">Features to be added later</a>
 - High scores
 - Levels
 - 3-D effect applied to user console
